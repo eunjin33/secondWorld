@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    div#header {
+        background-color: blueviolet;
+        border: 1px solid turquoise;
+        padding: 2%;
+        margin: 1%;
+        width: 900px;
+    }
+
+    div>a {
+        color: darkgray;
+        padding: 2%;
+    }
+
+    div#section {
+        width: 580px;
+        margin: 1%;
+        padding: 2%;
+        float: left;
+        border: 1px solid black;
+    }
+
+    div#nav {
+        width: 280px;
+        margin: 1%;
+        padding: 2%;
+        float: left;
+        border: 1px solid black;
+        background-color: rgb(194, 194, 194);
+    }
+
+    div#footer {
+        clear: both;
+        padding: 2%;
+        border: 1px solid black;
+        margin: 1%;
+        width: 900px;
+    }
+
+    div#section>p {
+        background-color: yellow;
+    }
+
+    tr:nth-child(2n) {
+        background-color: rgb(191, 226, 240);
+    }
+
+    tr:nth-child(2n+1) {
+        background-color: rgb(82, 140, 163);
+    }
+</style>
+
+<body style="border: 1px solid red;">
+    <div id="header">
+        <h1>ONLINE SSAFY</h1>
+        <a href="">메뉴1</a>
+        <a href="">메뉴2</a>
+        <a href="">메뉴3</a>
+        <a href="">메뉴4</a>
+    </div>
+    <div id="section">
+        <h3>기사1</h3>
+        <p>휘장은 한글 '서울'을 서울의 산, 해, 한강으로 나타내면서 전제적으로는 신명나는 사람의 모습을 형상화한 것으로 인간 중심도시를 지향하는 서울을 상징합니다. 자연 - 인간 - 도시의 맥락 속에서
+            녹색 산은 환경사랑, 청색 한강은 역사와 활력, 가운데 해는 미래의 비전과 희망을 함축하고, 이 세가지 요소를 붓터치로 자연스럽게 연결하여 서울의 이미지와 사람의 활력을 친근하게 느낄 수 있도록
+            하였습니다.
+            <br>
+            <br>
+            녹색 산은 환경사랑, 청색 한강은 역사와 확력, 가운데 해는 미래의 비전과 희망을 함축하고, 이 세가지 요소를 붓터치로 자연스럽게 연결하여 서울의 이미지와 사람의 활력을 친근하게
+            느낄 수 있도록
+            하였습니다.</p>
+        <h3>기사2</h3>
+        <table style="text-align: center; ">
+            <tr style="background-color: blue; color: white;">
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Make Insert data time customizable.</td>
+                <td>김감찬</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Make data fime order reversible for short</td>
+                <td>장영실</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Add Insert Data/Time commands shoetcut</td>
+                <td>안중근</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Fix regression: no error message when locked</td>
+                <td>김두한</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Make "Confirm Save All" dialog more slear:</td>
+                <td>계백</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Improve JSON, PHP, PYTHON,CSS,BANNC and</td>
+                <td>최무선</td>
+            </tr>
+        </table>
+    </div>
+    <div id="nav">
+        <h2>SIDEBAR</h2>
+        <p>모든 국민은 근로의 의무를 지닌다. 국가는 근로의 의무의 내용과 조건을 민주주의원칙에 따라 법률도 정한다.</p>
+    </div>
+    <div id="footer">
+        <h2>Footer</h2>
+        <p>이 헌법이생 당시의 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다.</p>
+    </div>
+</body>
+
+
+</html>

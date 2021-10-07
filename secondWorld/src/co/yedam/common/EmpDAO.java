@@ -6,6 +6,29 @@ import java.util.List;
 
 public class EmpDAO extends DAO {
 
+	public boolean checkId(String id) {
+
+		connect();
+		String sql = "SELECT * FROM empl_demo where employee_id = ?";
+		try {
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			rs = psmt.executeQuery();
+
+			if (rs.next()) {
+				return false;
+			} else {
+				return true;
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			disconnect();
+		}
+		return false;
+	}
+
 	public int deleteEmployee(String empId) {
 		connect();
 		String sql = "delete from empl_demo where employee_id = " + empId;
@@ -13,7 +36,7 @@ public class EmpDAO extends DAO {
 			stmt = conn.createStatement();
 			int r = stmt.executeUpdate(sql);
 			System.out.println(r + "건 삭제됨.");
-			//리턴 타입이 int여서 Integer.parseInt 이용해서 문자 타입을 숫자 타입으로 바꿔준다  
+			// 리턴 타입이 int여서 Integer.parseInt 이용해서 문자 타입을 숫자 타입으로 바꿔준다
 			return Integer.parseInt(empId);
 		} catch (SQLException e) {
 			e.printStackTrace();

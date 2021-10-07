@@ -9,6 +9,7 @@ xhtp.send();
 
 
 function showEmpList(data) {
+    
     let table, tr, td, txt;
     table = document.createElement('table');
     table.setAttribute('border', '1');
@@ -65,6 +66,7 @@ function showEmpList(data) {
             xhtp.open('get', '../delEmpServlet?delId=' + id);
             xhtp.send();
         }
+
         bnt.innerHTML = '삭제';
         td = document.createElement('td');
         td.appendChild(btn);
