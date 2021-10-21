@@ -7,14 +7,12 @@ import java.util.List;
 public class EmpDAO extends DAO {
 
 	public boolean checkId(String id) {
-
 		connect();
 		String sql = "SELECT * FROM empl_demo where employee_id = ?";
 		try {
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			rs = psmt.executeQuery();
-
 			if (rs.next()) {
 				return false;
 			} else {
